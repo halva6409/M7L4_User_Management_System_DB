@@ -3,7 +3,7 @@ import sqlite3
 import os
 from registration.registration import create_db, add_user, authenticate_user, display_users
 
-#vjq`
+
 
 @pytest.fixture(scope="module")
 def setup_database():
@@ -39,10 +39,28 @@ def test_add_new_user(setup_database, connection):
     assert user, "Пользователь должен быть добавлен в базу данных."
 
 # Возможные варианты тестов:
-"""
-Тест добавления пользователя с существующим логином.
-Тест успешной аутентификации пользователя.
-Тест аутентификации несуществующего пользователя.
-Тест аутентификации пользователя с неправильным паролем.
-Тест отображения списка пользователей.
-"""
+
+#Тест добавления пользователя с существующим логином.
+def test_successful_authentication(self):
+        self.assertTrue(authenticate_user('testuser', 'testpass'))
+    
+def test_authentication_nonexistent_user(self):
+    self.assertFalse(authenticate_user('nonexistent', 'wrongpass'))
+
+ 
+
+
+
+
+
+
+
+
+
+#Тест успешной аутентификации пользователя.
+#Тест аутентификации несуществующего пользователя.
+#Тест аутентификации пользователя с неправильным паролем.
+#Тест отображения списка пользователей.
+
+
+
